@@ -1,8 +1,8 @@
 # Third-party components
 
-MeshStreamKit embeds native components and Rust dependencies. Their licenses are
-independent of the proprietary SDK license. The following native license texts are
-preserved in `Licenses/`:
+MeshStreamKit includes third-party software subject to its own license terms.
+These terms are independent of the commercial MeshStreamKit license. Applicable
+license texts and copyright notices are preserved in `Licenses/`:
 
 | Component | Upstream source | License |
 | --- | --- | --- |
@@ -15,11 +15,13 @@ preserved in `Licenses/`:
 
 The submodule revisions for native dependencies are pinned by libdatachannel's
 v0.24.5 source tree. Corresponding source is available from the upstream links.
-Rust dependency metadata for this build is recorded in `Licenses/rust-dependencies.json`.
-The corresponding license texts and copyright notices from the normal iOS dependency
-closure are preserved in `Licenses/RustThirdPartyNotices.txt`; upstream repository
-links identify where to obtain the original source. This inventory is not a complete
-SBOM or a legal audit of every architecture's platform-specific dependencies.
+Additional license texts and copyright notices are preserved in
+`Licenses/RustThirdPartyNotices.txt`. For questions about corresponding third-party
+source, contact meshstreamsupport@gmail.com. Source availability obligations for
+covered components remain governed by their respective licenses, including any
+applicable modifications; the proprietary SDK license does not restrict those rights.
+These notices are not a complete SBOM or a legal audit of every platform-specific
+dependency.
 
 This inventory is not a statement that a host application's App Store privacy,
 export, or redistribution obligations have been satisfied. Integrators must retain
