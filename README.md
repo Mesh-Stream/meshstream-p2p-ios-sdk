@@ -4,7 +4,7 @@
 
 MeshStreamKit 为视频应用提供 P2P 分发能力，支持现有播放器接入及下载、上传、连接状态统计。P2P 不可用时可继续使用 HTTP/CDN 播放。通过 SDK Key 与播放地址即可开始集成。
 
-当前版本：`0.1.0` · [获取 SDK Key](https://console.meshstream.net/) · [在线演示](https://demo.meshstream.net/)
+当前版本：`1.0.0` · [获取 SDK Key](https://console.meshstream.net/) · [在线演示](https://demo.meshstream.net/)
 
 ## 产品能力
 
@@ -37,7 +37,7 @@ SPM 安装需要支持 Swift Tools 5.9 的 Xcode。Objective-C 工程也可通�
 https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 ```
 
-选择版本 `0.1.0`，将 `MeshStreamKit` 产品加入 App Target。
+选择最新稳定版本，将 `MeshStreamKit` 产品加入 App Target。
 
 ### CocoaPods
 
@@ -47,7 +47,7 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 platform :ios, '13.0'
 
 target 'YourApp' do
-  pod 'MeshStreamKit', '0.1.0'
+  pod 'MeshStreamKit'
 end
 ```
 
@@ -57,9 +57,9 @@ SDK 已发布至 CocoaPods Trunk。已有项目使用的版本化远程 `:podspe
 
 ### 手动集成
 
-下载 [MeshStreamKit 0.1.0](https://sdk.meshstream.net/apple/0.1.0/MeshStreamKit-r2.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
+下载 [MeshStreamKit 1.0.0](https://sdk.meshstream.net/apple/1.0.0/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
 
-版本及 SHA-256 校验信息见 [版本清单](releases/0.1.0.json)。
+版本及 SHA-256 校验信息见 [版本清单](releases/1.0.0.json)。
 
 ## 快速接入
 

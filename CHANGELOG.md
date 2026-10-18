@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0 — 2026-10-18
+
+首个正式稳定版 Apple 二进制分发版本。
+
+- 提供 iOS 真机、Intel/Apple Silicon 模拟器及 macOS Intel/Apple Silicon 的 XCFramework。
+- 完善播放生命周期、应用前后台处理和诊断日志能力。
+- 提供 SPM、CocoaPods 和手动集成入口。
+
+版本与二进制校验信息见 `releases/1.0.0.json`。
+
 ## 0.1.0 — 2026-10-18
 
 首个 Apple 二进制分发版本，包含 iOS 真机/双架构模拟器和 macOS Intel/Apple Silicon。
