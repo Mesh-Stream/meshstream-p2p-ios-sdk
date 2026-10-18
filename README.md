@@ -41,19 +41,19 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 
 ### CocoaPods
 
-在 Podfile 中添加版本化 podspec：
+在 Podfile 中添加：
 
 ```ruby
 platform :ios, '13.0'
 
 target 'YourApp' do
-  pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios-sdk/0.1.0/MeshStreamKit.podspec'
+  pod 'MeshStreamKit', '0.1.0'
 end
 ```
 
-执行 `pod install`，随后打开生成的 `.xcworkspace`。macOS 工程使用 `platform :osx, '10.14'`。
+首次安装执行 `pod install --repo-update`，随后打开生成的 `.xcworkspace`。macOS 工程使用 `platform :osx, '10.14'`。
 
-请使用上述 `:podspec` 安装方式，不要替换为 `:git`。当前版本尚未发布至 CocoaPods Trunk。
+SDK 已发布至 CocoaPods Trunk。已有项目使用的版本化远程 `:podspec` 安装入口仍可继续使用；不要改用 `:git` 安装。
 
 ### 手动集成
 
