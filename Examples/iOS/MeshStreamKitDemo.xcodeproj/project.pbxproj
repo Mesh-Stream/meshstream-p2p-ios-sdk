@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000101 /* AppDelegate.m */; };
+		100000000000000000000002 /* P2PDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000102 /* P2PDemoViewController.m */; };
+		100000000000000000000003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000103 /* main.m */; };
+		100000000000000000000007 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000112 /* SceneDelegate.m */; };
+		100000000000000000000008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000114 /* LaunchScreen.storyboard */; };
+		100000000000000000000005 /* MeshStreamKit in Frameworks */ = {isa = PBXBuildFile; productRef = 100000000000000000000802 /* MeshStreamKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		100000000000000000000202 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100000000000000000000203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000008 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		100000000000000000000101 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		100000000000000000000110 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		100000000000000000000102 /* P2PDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PDemoViewController.m; sourceTree = "<group>"; };
+		100000000000000000000111 /* P2PDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2PDemoViewController.h; sourceTree = "<group>"; };
+		100000000000000000000103 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		100000000000000000000112 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		100000000000000000000113 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		100000000000000000000114 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		100000000000000000000106 /* MeshStreamKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = MeshStreamKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		100000000000000000000107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100000000000000000000201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000005 /* MeshStreamKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100000000000000000000301 = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000302 /* MeshStreamKitDemo */,
+				100000000000000000000303 /* Frameworks */,
+				100000000000000000000304 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100000000000000000000302 /* MeshStreamKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000110 /* AppDelegate.h */,
+				100000000000000000000101 /* AppDelegate.m */,
+				100000000000000000000111 /* P2PDemoViewController.h */,
+				100000000000000000000102 /* P2PDemoViewController.m */,
+				100000000000000000000113 /* SceneDelegate.h */,
+				100000000000000000000112 /* SceneDelegate.m */,
+				100000000000000000000114 /* LaunchScreen.storyboard */,
+				100000000000000000000103 /* main.m */,
+				100000000000000000000107 /* Info.plist */,
+			);
+			path = MeshStreamKitDemo;
+			sourceTree = "<group>";
+		};
+		100000000000000000000303 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		100000000000000000000304 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000106 /* MeshStreamKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100000000000000000000401 /* MeshStreamKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000000000501 /* Build configuration list for PBXNativeTarget "MeshStreamKitDemo" */;
+			buildPhases = (
+				100000000000000000000601 /* Sources */,
+				100000000000000000000201 /* Frameworks */,
+				100000000000000000000203 /* Resources */,
+				100000000000000000000202 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeshStreamKitDemo;
+			packageProductDependencies = (
+				100000000000000000000802 /* MeshStreamKit */,
+			);
+			productName = MeshStreamKitDemo;
+			productReference = 100000000000000000000106 /* MeshStreamKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100000000000000000000310 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					100000000000000000000401 = {
+						CreatedOnToolsVersion = 26.1.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 100000000000000000000502 /* Build configuration list for PBXProject "MeshStreamKitDemo" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100000000000000000000301;
+			packageReferences = (
+				100000000000000000000801 /* XCLocalSwiftPackageReference "../.." */,
+			);
+			productRefGroup = 100000000000000000000304 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100000000000000000000401 /* MeshStreamKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100000000000000000000601 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000001 /* AppDelegate.m in Sources */,
+				100000000000000000000002 /* P2PDemoViewController.m in Sources */,
+				100000000000000000000007 /* SceneDelegate.m in Sources */,
+				100000000000000000000003 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		100000000000000000000701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = MeshStreamKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.meshstreamkit.demo.ios;
+				PRODUCT_NAME = MeshStreamKitDemo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"UIKit",
+					"-framework",
+					"CoreGraphics",
+					"-framework",
+					"AVKit",
+					"-framework",
+					"AVFoundation",
+					"-framework",
+					"CoreMedia",
+				);
+			};
+			name = Debug;
+		};
+		100000000000000000000702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = MeshStreamKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meshstreamkit.demo.ios;
+				PRODUCT_NAME = MeshStreamKitDemo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"UIKit",
+					"-framework",
+					"CoreGraphics",
+					"-framework",
+					"AVKit",
+					"-framework",
+					"AVFoundation",
+					"-framework",
+					"CoreMedia",
+				);
+			};
+			name = Release;
+		};
+		100000000000000000000703 /* Project Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		100000000000000000000704 /* Project Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100000000000000000000501 /* Build configuration list for PBXNativeTarget "MeshStreamKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000701 /* Debug */,
+				100000000000000000000702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100000000000000000000502 /* Build configuration list for PBXProject "MeshStreamKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000703 /* Project Debug */,
+				100000000000000000000704 /* Project Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		100000000000000000000801 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../..";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		100000000000000000000802 /* MeshStreamKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 100000000000000000000801 /* XCLocalSwiftPackageReference "../.." */;
+			productName = MeshStreamKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+		rootObject = 100000000000000000000310 /* Project object */;
+	}

@@ -1,0 +1,12 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData*/
+Pods/
+*.xcuserstate
+xcuserdata/
+*.xcframework/
+*.zip
+*.log
+*.app/
+*.dSYM/
