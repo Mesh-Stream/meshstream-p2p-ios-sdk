@@ -11,7 +11,7 @@ MeshStreamKit 是播放器无关的 P2P 媒体分发 SDK，使用 Objective-C AP
 Xcode → File → Add Package Dependencies，输入：
 
 ```text
-https://github.com/Mesh-Stream/meshstream-p2p-ios
+https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk
 ```
 
 选择版本 `0.1.0`，添加 `MeshStreamKit` 产品。Objective-C 工程也可以使用 SPM 安装，无需改成 Swift。
@@ -24,7 +24,7 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios
 platform :ios, '13.0'
 
 target 'YourApp' do
-  pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios/0.1.0/MeshStreamKit.podspec'
+  pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios-sdk/0.1.0/MeshStreamKit.podspec'
 end
 ```
 
