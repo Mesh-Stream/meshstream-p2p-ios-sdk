@@ -92,6 +92,8 @@ config.fileLoggingEnabled = YES; // 可选，默认关闭；在创建 client 之
 
 ## 发布与支持
 
+维护者更新 SDK 或更换开发电脑时，按 [发布约定与换机手册](RELEASING.md) 操作。
+
 版本变更见 [CHANGELOG](CHANGELOG.md)。SDK 为专有软件，使用需遵循适用协议。第三方组件说明见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md)。App Store 发布前，集成方仍需按实际使用方式核对隐私披露、签名及权限要求。
 
 支持邮箱：meshstreamsupport@gmail.com。
