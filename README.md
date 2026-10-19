@@ -1,5 +1,13 @@
 # MeshStreamKit
 
+## MeshStream SDKs
+
+- [Online Demo](https://demo.meshstream.net/) for a live Web playback and P2P delivery view.
+- [Web Demo](https://github.com/Mesh-Stream/meshstream-p2p-web-sdk) using the published npm SDK.
+- [Android SDK](https://github.com/Mesh-Stream/meshstream-p2p-android-sdk) for Media3 / ExoPlayer apps.
+- [Apple SDK](https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk) for iOS and macOS apps.
+- [Windows SDK](https://github.com/Mesh-Stream/meshstream-p2p-Windows-sdk) for C/C++ desktop apps.
+
 面向 iOS 与 macOS 应用的视频分发加速 SDK。
 
 MeshStreamKit 为视频应用提供 P2P 分发能力，支持现有播放器接入及下载、上传、连接状态统计。P2P 不可用时可继续使用 HTTP/CDN 播放。通过 SDK Key 与播放地址即可开始集成。
