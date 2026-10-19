@@ -2,6 +2,8 @@
 
 [简体中文](README.zh-CN.md)
 
+[Release Maintenance Contract](RELEASE_CONTRACT.md)
+
 MeshStreamKit is the MeshStream media delivery SDK for iOS and macOS. It
 creates a CDN-compatible playback URL and adds P2P delivery opportunistically;
 your player remains responsible for rendering and playback lifecycle.
