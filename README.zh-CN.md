@@ -2,8 +2,6 @@
 
 [English](README.md)
 
-[发布维护契约](RELEASE_CONTRACT.md)
-
 ## MeshStream SDKs
 
 - [Online Demo](https://demo.meshstream.net/) for a live Web playback and P2P delivery view.
