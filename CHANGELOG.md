@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.2 — 2026-10-20
+
+- Adds an instance-level `P2PClient.close` API so an app can release the client
+  and the sessions it owns without affecting other clients in the process.
+- Refreshes the iOS/macOS XCFramework distribution for the current native SDK
+  release.
+
+Version and binary verification details: `releases/1.0.2.json`.
+
 ## 1.0.0 — 2026-10-18
 
 首个正式稳定版 Apple 二进制分发版本。

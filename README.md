@@ -29,16 +29,17 @@ arm64 slices for macOS.
 
 ### Swift Package Manager
 
-Add the package URL in Xcode, or declare the binary package as a dependency:
+In Xcode, choose **File → Add Package Dependencies**, enter the package URL,
+then select the latest stable release:
 
-```swift
-.package(url: "https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git", from: "1.0.0")
+```text
+https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 ```
 
 ### CocoaPods
 
 ```ruby
-pod 'MeshStreamKit', '1.0.0'
+pod 'MeshStreamKit'
 ```
 
 Run `pod install` after updating your Podfile.
@@ -55,7 +56,7 @@ item, then hand the returned URL to `AVPlayer` or another URL-capable player.
 P2PConfig *config = [[P2PConfig alloc] initWithKey:@"YOUR_IOS_SDK_KEY"];
 NSError *error = nil;
 P2PClient *client = [P2PSDK clientWithConfig:config error:&error];
-P2PPlaybackSession *session = [client createPlaybackSessionWithURL:mediaURL error:&error];
+PlaybackSession *session = [client createPlaybackSessionWithURL:mediaURL error:&error];
 
 AVPlayer *player = [AVPlayer playerWithURL:session.playbackUrl];
 [player play];

@@ -1,0 +1,15 @@
+{
+  "name": "MeshStreamKit",
+  "version": "1.0.2",
+  "url": "https://sdk.meshstream.net/apple/1.0.2/MeshStreamKit.zip",
+  "sha256": "3cc6edd0fd3bbd4f1edc507c5c86d7634d92cb6291f75b777686b03445e51d35",
+  "type": "dynamic-xcframework",
+  "packagingRevision": 1,
+  "sourceRevision": "ab71744d3bbbc90b8456917f3edf864d92dd760b",
+  "builtAt": "2026-10-20",
+  "slices": [
+    { "platform": "ios", "variant": "device", "architectures": ["arm64"], "minimumOS": "13.0" },
+    { "platform": "ios", "variant": "simulator", "architectures": ["x86_64", "arm64"], "minimumOSByArchitecture": {"x86_64": "13.0", "arm64": "14.0"} },
+    { "platform": "macos", "architectures": ["x86_64", "arm64"], "minimumOSByArchitecture": {"x86_64": "10.14", "arm64": "11.0"} }
+  ]
+}

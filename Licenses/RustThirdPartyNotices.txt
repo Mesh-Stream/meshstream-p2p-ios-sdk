@@ -1,4 +1,4 @@
-Rust dependency license texts for MeshStreamKit 1.0.0
+Rust dependency license texts for MeshStreamKit 1.0.2
 Generated from normal dependencies for aarch64-apple-ios.
 Original license texts and copyright notices follow.
 
