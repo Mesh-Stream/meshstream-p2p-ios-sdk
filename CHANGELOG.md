@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.4 — 2026-10-23
+
+- Updates the MeshStreamKit XCFramework distribution to native SDK 1.0.4.
+- Includes iOS device, universal iOS simulator, and universal macOS slices.
+
+Version and binary verification details: `releases/1.0.4.json`.
+
 ## 1.0.2 — 2026-10-20
 
 - Adds an instance-level `P2PClient.close` API so an app can release the client
