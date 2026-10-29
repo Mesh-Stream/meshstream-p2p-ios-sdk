@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.7 — 2026-10-29
+
+- Raises the minimum deployment targets to iOS 15 and macOS 12.
+- Publishes the MeshStreamKit XCFramework with iOS device/simulator and universal macOS slices.
+
+Version and binary verification details: `releases/1.0.7.json`.
+
+
 ## 1.0.6 — 2026-10-29
 
 - Updates the MeshStreamKit XCFramework distribution to native SDK 1.0.6.

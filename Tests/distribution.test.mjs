@@ -14,7 +14,7 @@ const run = (command, args) => execFileSync(command, args, {
 
 test("SPM resolves a binary product with the published archive and checksum", () => {
   assert.ok(existsSync(resolve(root, "Package.swift")), "Customer Package.swift is missing");
-  const release = JSON.parse(read("releases/1.0.6.json"));
+  const release = JSON.parse(read("releases/1.0.7.json"));
   const manifest = JSON.parse(run("swift", ["package", "dump-package"]));
   assert.equal(manifest.name, "MeshStreamKit");
   assert.deepEqual(manifest.products[0].targets, ["MeshStreamKit"]);
@@ -27,21 +27,21 @@ test("SPM resolves a binary product with the published archive and checksum", ()
 
 test("CocoaPods resolves the same archive with a matching SHA-256", () => {
   assert.ok(existsSync(resolve(root, "MeshStreamKit.podspec")), "Customer podspec is missing");
-  const release = JSON.parse(read("releases/1.0.6.json"));
+  const release = JSON.parse(read("releases/1.0.7.json"));
   const spec = JSON.parse(run("pod", ["ipc", "spec", "MeshStreamKit.podspec"]));
   assert.equal(spec.name, "MeshStreamKit");
   assert.equal(spec.version, release.version);
   assert.equal(spec.source.http, release.url);
   assert.equal(spec.source.sha256, release.sha256);
   assert.equal(spec.vendored_frameworks, "MeshStreamKit.xcframework");
-  assert.equal(spec.platforms.ios, "13.0");
-  assert.equal(spec.platforms.osx, "10.14");
+  assert.equal(spec.platforms.ios, "15.0");
+  assert.equal(spec.platforms.osx, "12.0");
 });
 
 test("release checksum and platform slices match the actual ZIP", {
   skip: !process.env.MESHSTREAM_SDK_ZIP && "Set MESHSTREAM_SDK_ZIP to validate the binary archive",
 }, () => {
-  const release = JSON.parse(read("releases/1.0.6.json"));
+  const release = JSON.parse(read("releases/1.0.7.json"));
   const zip = resolve(process.env.MESHSTREAM_SDK_ZIP);
   assert.equal(createHash("sha256").update(readFileSync(zip)).digest("hex"), release.sha256);
   const paths = new Set(run("unzip", ["-Z1", zip]).split("\n"));

@@ -18,9 +18,9 @@ your player remains responsible for rendering and playback lifecycle.
 
 | Platform | Minimum supported version |
 | --- | --- |
-| iOS device | iOS 13 |
-| iOS simulator | iOS 13 on Intel, iOS 14 on Apple Silicon |
-| macOS | macOS 10.14 on Intel, macOS 11 on Apple Silicon |
+| iOS device | iOS 15 |
+| iOS simulator | iOS 15 on Intel, iOS 15 on Apple Silicon |
+| macOS | macOS 12 on Intel, macOS 12 on Apple Silicon |
 
 The release contains device and simulator slices for iOS plus x86_64 and
 arm64 slices for macOS.

@@ -3,13 +3,13 @@ import PackageDescription
 
 let package = Package(
     name: "MeshStreamKit",
-    platforms: [.iOS(.v13), .macOS(.v10_14)],
+    platforms: [.iOS(.v15), .macOS(.v12)],
     products: [.library(name: "MeshStreamKit", targets: ["MeshStreamKit"])],
     targets: [
         .binaryTarget(
             name: "MeshStreamKit",
-            url: "https://sdk.meshstream.net/apple/1.0.6/MeshStreamKit.zip",
-            checksum: "91ad37845751c8b4de0363fba692dd9c9204a1c52bb06243d388fbe4d5c757ea"
+            url: "https://sdk.meshstream.net/apple/1.0.7/MeshStreamKit.zip",
+            checksum: "11843fe4eefcf11d2e75b412eb1f2c9dca46c85e3b322cfaf31645d92c846041"
         )
     ]
 )

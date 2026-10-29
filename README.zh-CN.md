@@ -14,7 +14,7 @@
 
 MeshStreamKit 为视频应用提供 P2P 分发能力，支持现有播放器接入及下载、上传、连接状态统计。P2P 不可用时可继续使用 HTTP/CDN 播放。通过 SDK Key 与播放地址即可开始集成。
 
-当前版本：`1.0.6` · [获取 SDK Key](https://console.meshstream.net/) · [在线演示](https://demo.meshstream.net/)
+当前版本：`1.0.7` · [获取 SDK Key](https://console.meshstream.net/) · [在线演示](https://demo.meshstream.net/)
 
 ## 产品能力
 
@@ -29,9 +29,9 @@ MeshStreamKit 为视频应用提供 P2P 分发能力，支持现有播放器接�
 
 | 环境 | 最低系统版本 |
 | --- | --- |
-| iOS 真机 | iOS 13 |
-| iOS 模拟器（Intel / Apple Silicon） | iOS 13 / iOS 14 |
-| macOS（Intel / Apple Silicon） | macOS 10.14 / macOS 11 |
+| iOS 真机 | iOS 15 |
+| iOS 模拟器（Intel / Apple Silicon） | iOS 15 / iOS 15 |
+| macOS（Intel / Apple Silicon） | macOS 12 / macOS 12 |
 
 SPM 安装需要支持 Swift Tools 5.9 的 Xcode。Objective-C 工程也可通过 SPM 安装，无需转换工程语言。
 
@@ -54,22 +54,22 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 在 Podfile 中添加：
 
 ```ruby
-platform :ios, '13.0'
+platform :ios, '15.0'
 
 target 'YourApp' do
   pod 'MeshStreamKit'
 end
 ```
 
-首次安装执行 `pod install --repo-update`，随后打开生成的 `.xcworkspace`。macOS 工程使用 `platform :osx, '10.14'`。
+首次安装执行 `pod install --repo-update`，随后打开生成的 `.xcworkspace`。macOS 工程使用 `platform :osx, '12.0'`。
 
 SDK 已发布至 CocoaPods Trunk。已有项目使用的版本化远程 `:podspec` 安装入口仍可继续使用；不要改用 `:git` 安装。
 
 ### 手动集成
 
-下载 [MeshStreamKit 1.0.6](https://sdk.meshstream.net/apple/1.0.6/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
+下载 [MeshStreamKit 1.0.7](https://sdk.meshstream.net/apple/1.0.7/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
 
-版本及 SHA-256 校验信息见 [版本清单](releases/1.0.6.json)。
+版本及 SHA-256 校验信息见 [版本清单](releases/1.0.7.json)。
 
 ## 快速接入
 

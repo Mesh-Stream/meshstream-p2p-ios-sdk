@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "MeshStreamKitMacDemo",
-    platforms: [.macOS(.v10_14)],
+    platforms: [.macOS(.v12)],
     dependencies: [.package(name: "MeshStreamKit", path: "../..")],
     targets: [
         .executableTarget(
