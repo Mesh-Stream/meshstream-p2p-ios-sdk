@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.6 — 2026-10-29
+
+- Updates the MeshStreamKit XCFramework distribution to native SDK 1.0.6.
+- Includes iOS device, universal iOS simulator, and universal macOS slices.
+- Includes the preload swarm prewarm and idle cleanup changes.
+
+Version and binary verification details: `releases/1.0.6.json`.
+
+
 ## 1.0.4 — 2026-10-23
 
 - Updates the MeshStreamKit XCFramework distribution to native SDK 1.0.4.

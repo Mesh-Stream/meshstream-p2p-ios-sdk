@@ -1,0 +1,68 @@
+{
+  "name": "MeshStreamKit",
+  "version": "1.0.6",
+  "url": "https://sdk.meshstream.net/apple/1.0.6/MeshStreamKit.zip",
+  "sha256": "91ad37845751c8b4de0363fba692dd9c9204a1c52bb06243d388fbe4d5c757ea",
+  "type": "dynamic-xcframework",
+  "packagingRevision": 1,
+  "sourceRevision": "dd8e34443780bca22c65ac070517c8392b0b4fa8",
+  "builtAt": "2026-10-29",
+  "slices": [
+    {
+      "platform": "ios",
+      "variant": "device",
+      "architectures": [
+        "arm64"
+      ],
+      "minimumOS": "13.0"
+    },
+    {
+      "platform": "ios",
+      "variant": "simulator",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "minimumOSByArchitecture": {
+        "x86_64": "13.0",
+        "arm64": "14.0"
+      }
+    },
+    {
+      "platform": "macos",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "minimumOSByArchitecture": {
+        "x86_64": "10.14",
+        "arm64": "11.0"
+      }
+    }
+  ],
+  "validation": {
+    "macosAppleSilicon": {
+      "status": "passed",
+      "architecture": "arm64",
+      "note": "XCFramework arm64 slice built and architecture-checked; runtime demo validation pending for 1.0.6"
+    },
+    "macosIntel": {
+      "status": "pending",
+      "architecture": "x86_64",
+      "note": "Intel Mac runtime验收待完成"
+    },
+    "iosSimulator": {
+      "status": "passed",
+      "architectures": [
+        "arm64",
+        "x86_64"
+      ],
+      "note": "Simulator slice built and architecture-checked"
+    },
+    "iosDevice": {
+      "status": "pending",
+      "architecture": "arm64",
+      "note": "iOS真机验收待完成"
+    }
+  }
+}
