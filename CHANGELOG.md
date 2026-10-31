@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.8 — 2026-10-31
+
+- Updates the MeshStreamKit XCFramework to native SDK 1.0.7.
+- Ensures proxy connections are closed during SDK shutdown, including existing keep-alive connections.
+- Publishes iOS device, universal iOS simulator, and universal macOS slices.
+
+Version and binary verification details: `releases/1.0.8.json`.
+
 ## 1.0.7 — 2026-10-29
 
 - Raises the minimum deployment targets to iOS 15 and macOS 12.
