@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.10 — 2026-11-07
+
+- Aligns the Apple XCFramework with native SDK 1.0.10.
+- Publishes iOS device, universal iOS simulator, and universal macOS slices.
+- Keeps iOS 15 and macOS 12 as the minimum deployment targets.
+
+Version and binary verification details: `releases/1.0.10.json`.
+
 ## 1.0.8 — 2026-10-31
 
 - Updates the MeshStreamKit XCFramework to native SDK 1.0.7.

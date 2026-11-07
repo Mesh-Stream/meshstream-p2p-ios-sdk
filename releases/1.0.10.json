@@ -1,0 +1,21 @@
+{
+  "name": "MeshStreamKit",
+  "version": "1.0.10",
+  "url": "https://sdk.meshstream.net/apple/1.0.10/MeshStreamKit.zip",
+  "sha256": "1f19243273091916cc5877d383e1ec08997938316d9c34bc71e2ff601727f0f9",
+  "type": "dynamic-xcframework",
+  "packagingRevision": 1,
+  "sourceRevision": "8f14b04d66592bc2150ca3f819cea325e20cedf7",
+  "builtAt": "2026-11-07",
+  "slices": [
+    { "platform": "ios", "variant": "device", "architectures": ["arm64"], "minimumOS": "15.0" },
+    { "platform": "ios", "variant": "simulator", "architectures": ["x86_64", "arm64"], "minimumOSByArchitecture": { "x86_64": "15.0", "arm64": "15.0" } },
+    { "platform": "macos", "architectures": ["x86_64", "arm64"], "minimumOSByArchitecture": { "x86_64": "12.0", "arm64": "12.0" } }
+  ],
+  "validation": {
+    "macosAppleSilicon": { "status": "built-verified", "architecture": "arm64", "note": "Universal macOS slice contains arm64; runtime demo validation pending" },
+    "macosIntel": { "status": "pending", "architecture": "x86_64", "note": "Intel Mac runtime验收待完成" },
+    "iosSimulator": { "status": "built-verified", "architectures": ["arm64", "x86_64"], "note": "Universal simulator slice architecture-checked" },
+    "iosDevice": { "status": "pending", "architecture": "arm64", "note": "iOS真机验收待完成" }
+  }
+}
