@@ -1,20 +1,19 @@
-# MeshStreamKit
+# MeshStreamKit: P2P SDK for iOS and macOS
 
-[简体中文](README.zh-CN.md)
+[简体中文](README.zh-CN.md) · [Website](https://meshstream.net/) · [Documentation](https://meshstream.net/docs/sdk/ios-setup/) · [CocoaPods](https://cocoapods.org/pods/MeshStreamKit) · [Live demo](https://demo.meshstream.net/)
 
-MeshStreamKit is the MeshStream media delivery SDK for iOS and macOS. It
-creates a CDN-compatible playback URL and adds P2P delivery opportunistically;
-your player remains responsible for rendering and playback lifecycle.
+MeshStreamKit is a P2P video and audio streaming SDK for iOS and macOS apps built with Swift or Objective-C. It provides a local playback URL for AVPlayer or another URL-capable player, adds peer-assisted delivery when available, and falls back to HTTP/CDN delivery.
 
 Current release: `1.0.10`.
 
-## MeshStream SDKs
+## Features
 
-- [Online Demo](https://demo.meshstream.net/) for a live Web playback and P2P delivery view.
-- [Web Demo](https://github.com/Mesh-Stream/meshstream-p2p-web-sdk) using the published npm SDK.
-- [Android SDK](https://github.com/Mesh-Stream/meshstream-p2p-android-sdk) for Media3 / ExoPlayer apps.
-- [Apple SDK](https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk) for iOS and macOS apps.
-- [Windows SDK](https://github.com/Mesh-Stream/meshstream-p2p-Windows-sdk) for C/C++ desktop apps.
+- HLS, MPEG-DASH and HTTP Range MP4/MP3 delivery through a shared session API.
+- Swift and Objective-C integration with AVPlayer or another compatible player.
+- Preload, per-session traffic counters, peer events and diagnostics.
+- Swift Package Manager and CocoaPods; iOS device, universal iOS simulator and universal macOS components.
+
+Media decoding and format support depend on your chosen player and platform. P2P availability depends on network conditions and peers with matching content.
 
 ## Requirements
 
@@ -98,3 +97,12 @@ MeshStreamKit is proprietary software distributed under the applicable
 commercial agreement. Review [LICENSE](LICENSE) and
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). For integration, licensing,
 or distribution support, contact support@meshstream.net.
+
+## Other MeshStream SDKs
+
+- [Web](https://github.com/Mesh-Stream/meshstream-p2p-web-sdk): JavaScript / TypeScript, WebRTC and browser players.
+- [Android](https://github.com/Mesh-Stream/meshstream-p2p-android-sdk): Kotlin / Java, Maven and Media3 / ExoPlayer.
+- [Windows](https://github.com/Mesh-Stream/meshstream-p2p-Windows-sdk): C / C++ API for Windows 10 / 11 x64.
+- [uni-app](https://github.com/Mesh-Stream/meshstream-p2p-uniapp-sdk): UTS / JavaScript plugin for iOS and Android apps.
+- [Flutter](https://github.com/Mesh-Stream/meshstream-p2p-flutter-sdk): Dart plugin for iOS / Android with video_player examples.
+- [React Native](https://github.com/Mesh-Stream/meshstream-p2p-react-native-sdk): TypeScript API for iOS / Android with react-native-video examples.
