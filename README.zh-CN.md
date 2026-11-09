@@ -6,6 +6,17 @@ MeshStreamKit 是面向 Swift / Objective-C 应用的 iOS 与 macOS P2P 视频�
 
 当前版本：`1.0.10`。
 
+## 工作方式
+
+把原始媒体地址交给 SDK 创建会话，再把会话的 `playbackUrl` 交给现有播放器：
+
+```text
+应用 → SDK 创建播放会话 → 本地播放地址 → 播放器
+                            └─ SDK 从 Peer 或源站/CDN 获取媒体
+```
+
+播放器继续负责解码、画面和播放控制；SDK 负责媒体传输、缓存及 P2P 调度。服务配置与 P2P 准备在后台执行，不需要等到 Peer 连接后才开始播放。离开播放页或切换内容时，先停止使用旧播放地址，再关闭旧会话。
+
 ## 产品能力
 
 - 通过统一会话 API 接入 HLS、MPEG-DASH 和支持 HTTP Range 的 MP4/MP3。
@@ -13,7 +24,13 @@ MeshStreamKit 是面向 Swift / Objective-C 应用的 iOS 与 macOS P2P 视频�
 - 提供预加载、会话流量统计、Peer 事件与诊断接口。
 - 支持 Swift Package Manager 与 CocoaPods，提供 iOS 真机及 iOS 模拟器、macOS 双架构组件。
 
-媒体解码与格式兼容性取决于所选播放器和平台；P2P 可用性取决于网络条件及持有相同内容的 Peer。
+## 接入准备
+
+- 在 [MeshStream 控制台](https://console.meshstream.net/)创建应用和对应平台的 SDK Key；启用身份校验时，登记与运行应用一致的包名或 Bundle ID。
+- 准备一个可播放的 HLS `.m3u8`、DASH `.mpd`、支持 Range 的 MP4 或 MP3 地址，建议使用 HTTPS。
+- 选择支持该媒体格式的播放器。SDK 提供传输能力，不增加播放器的解码能力；例如 AVPlayer 不原生支持 DASH。
+
+希望先看效果？直接跳到[运行 Demo](#运行-demo)，再按下方步骤接入自己的应用。顶部的在线 Demo 是 Web 体验页，各端示例在本仓库中运行。
 
 ## 环境要求
 
@@ -37,7 +54,7 @@ SPM 安装需要支持 Swift Tools 5.9 的 Xcode。Objective-C 工程也可通�
 https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 ```
 
-选择最新稳定版本，将 `MeshStreamKit` 产品加入 App Target。
+选择 **Exact Version: 1.0.10**，将 `MeshStreamKit` 产品加入 App Target。
 
 ### CocoaPods
 
@@ -47,7 +64,7 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 platform :ios, '15.0'
 
 target 'YourApp' do
-  pod 'MeshStreamKit'
+  pod 'MeshStreamKit', '1.0.10'
 end
 ```
 
@@ -60,6 +77,12 @@ SDK 已发布至 CocoaPods Trunk。已有项目使用的版本化远程 `:podspe
 下载 [MeshStreamKit 1.0.10](https://sdk.meshstream.net/apple/1.0.10/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
 
 版本及 SHA-256 校验信息见 [版本清单](releases/1.0.10.json)。
+
+## 应用配置
+
+- iOS：在 Info.plist 中设置 `NSAppTransportSecurity → NSAllowsLocalNetworking = YES`，参考 Demo。媒体源的其他 ATS 例外按业务需要配置，不建议直接放开所有网络请求。
+- macOS：开启 App Sandbox 时，添加 `com.apple.security.network.client` 和 `com.apple.security.network.server` 权限。
+- 后台播放、音频会话及画中画按应用需求和播放器文档配置。
 
 ## 快速接入
 
@@ -85,6 +108,7 @@ if (!self.session) {
     return;
 }
 
+// 由 AVPlayerLayer 或播放器控制器呈现画面。
 self.player = [AVPlayer playerWithURL:self.session.playbackUrl];
 [self.player play];
 ```
@@ -93,13 +117,25 @@ self.player = [AVPlayer playerWithURL:self.session.playbackUrl];
 
 切换视频或离开播放页时，先暂停播放器并解除其对旧播放 Item 的引用，再调用 `[session close]`。应用不再使用 SDK 时，可调用 `[P2PSDK shutdown]` 关闭所有 SDK 客户端。
 
-### 应用配置
+## 运行 Demo
 
-- iOS：在 Info.plist 中设置 `NSAppTransportSecurity → NSAllowsLocalNetworking = YES`，参考 Demo。媒体源的其他 ATS 例外按业务需要配置，不建议直接放开所有网络请求。
-- macOS：开启 App Sandbox 时，添加 `com.apple.security.network.client` 和 `com.apple.security.network.server` 权限。
-- 后台播放、音频会话及画中画按应用需求和播放器文档配置。
+```bash
+git clone https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
+cd meshstream-p2p-ios-sdk
+```
 
-### 诊断日志
+**iOS：** 打开 [`Examples/iOS/MeshStreamKitDemo.xcodeproj`](Examples/iOS/MeshStreamKitDemo.xcodeproj)，等待 Xcode 解析 SPM 依赖，选择模拟器或自己的签名 Team、Bundle ID 和真机后运行。在 Demo 中输入对应 Key 和媒体地址，再开始播放。
+
+**macOS：** 在 Mac 上执行：
+
+```bash
+cd Examples/macOS
+swift run MeshStreamKitMacDemo
+```
+
+在窗口中填写 macOS Key 和媒体地址。示例使用 AVPlayer，首次测试建议使用 HLS。窗口同时展示 Peer 与上下行流量。
+
+## 诊断日志
 
 日志默认关闭。如需排查问题，在创建客户端前配置：
 
@@ -110,14 +146,19 @@ config.fileLoggingEnabled = YES;
 
 文件日志保存在应用的 Caches 目录中，支持滚动清理，不自动上传。生产环境建议按需启用；提交诊断资料前，请移除 SDK Key、访问凭据及敏感播放地址。
 
-## 示例工程
+## 确认 P2P 生效
 
-- iOS：打开 `Examples/iOS/MeshStreamKitDemo.xcodeproj`，选择自己的签名 Team 与 Bundle ID，填写对应 SDK Key 后运行。
-- macOS：在 `Examples/macOS` 中执行 `swift run MeshStreamKitMacDemo`，填写对应 SDK Key 后测试。
+1. 在两台设备或两个可同时运行的实例中，用各自有效的 Key 播放同一内容，保持相同清晰度和相近播放进度。签名 URL 会变化时，为同一内容使用相同、稳定的内容 ID；不同内容不要共用 ID。
+2. 查看 Demo 的 Peer 数和流量统计。Peer 大于 0 表示已连接节点；**P2P 下载或上传字节持续增加**才说明发生了媒体共享。
+3. 关闭另一个实例，确认剩余实例仍能通过 HTTP/CDN 播放；然后测试拖动、切换内容和退出页面的释放流程。
 
-示例不内置客户 SDK Key。正式接入前，请根据业务场景完成目标设备、网络条件和播放器兼容性测试。
+只有一个观看者或没有可共享分片时，主要走 HTTP/CDN 属于正常情况。发现 Peer 及实际共享还取决于账户配置、网络连通性和双方缓存内容。
 
-## 商业授权与支持
+## 更多用法与支持
+
+预加载、直播/点播调度、播放器状态回传、多会话及诊断，请参阅[高级用法](https://meshstream.net/zh/docs/sdk/ios-advanced/)。更新记录见 [CHANGELOG](CHANGELOG.md)。接入问题请联系 support@meshstream.net，并附 SDK 版本、系统、播放器和脱敏日志。
+
+## 商业授权
 
 MeshStreamKit 为商业 SDK，使用与分发以适用的商业授权协议为准。本仓库提供接入资料及示例，不授予 SDK 内部实现的额外使用权。
 
