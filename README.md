@@ -60,7 +60,11 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 pod 'MeshStreamKit', '1.1.0'
 ```
 
-Run `pod install` after updating your Podfile.
+Run `pod install` after updating your Podfile. You can also pin the versioned podspec:
+
+```ruby
+pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios-sdk/1.1.0/MeshStreamKit.podspec'
+```
 
 Choose one installation method per app target. SPM requires a toolchain supporting Swift Tools 5.9. After CocoaPods installation, open the generated `.xcworkspace`.
 

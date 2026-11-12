@@ -72,6 +72,13 @@ end
 
 SDK 已发布至 CocoaPods Trunk。已有项目使用的版本化远程 `:podspec` 安装入口仍可继续使用；不要改用 `:git` 安装。
 
+也可以通过版本化 podspec 固定安装同一版本：
+
+```ruby
+pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios-sdk/1.1.0/MeshStreamKit.podspec'
+```
+
+
 ### 手动集成
 
 下载 [MeshStreamKit 1.1.0](https://sdk.meshstream.net/apple/1.1.0/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
