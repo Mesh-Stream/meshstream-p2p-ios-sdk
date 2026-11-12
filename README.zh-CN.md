@@ -4,7 +4,7 @@
 
 MeshStreamKit 是面向 Swift / Objective-C 应用的 iOS 与 macOS P2P 视频、音频流媒体 SDK。它为 AVPlayer 或其他支持 URL 的播放器提供本地播放地址，在可用时使用点对点分发，P2P 不可用时回退到 HTTP/CDN。
 
-当前版本：`1.0.10`。
+当前版本：`1.1.0`。
 
 ## 工作方式
 
@@ -54,7 +54,7 @@ SPM 安装需要支持 Swift Tools 5.9 的 Xcode。Objective-C 工程也可通�
 https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 ```
 
-选择 **Exact Version: 1.0.10**，将 `MeshStreamKit` 产品加入 App Target。
+选择 **Exact Version: 1.1.0**，将 `MeshStreamKit` 产品加入 App Target。
 
 ### CocoaPods
 
@@ -64,7 +64,7 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 platform :ios, '15.0'
 
 target 'YourApp' do
-  pod 'MeshStreamKit', '1.0.10'
+  pod 'MeshStreamKit', '1.1.0'
 end
 ```
 
@@ -74,9 +74,9 @@ SDK 已发布至 CocoaPods Trunk。已有项目使用的版本化远程 `:podspe
 
 ### 手动集成
 
-下载 [MeshStreamKit 1.0.10](https://sdk.meshstream.net/apple/1.0.10/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
+下载 [MeshStreamKit 1.1.0](https://sdk.meshstream.net/apple/1.1.0/MeshStreamKit.zip)，解压后将 `MeshStreamKit.xcframework` 添加到 App Target，设置为 **Embed & Sign**。
 
-版本及 SHA-256 校验信息见 [版本清单](releases/1.0.10.json)。
+版本及 SHA-256 校验信息见 [版本清单](releases/1.1.0.json)。
 
 ## 应用配置
 

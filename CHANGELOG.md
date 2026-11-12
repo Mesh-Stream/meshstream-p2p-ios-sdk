@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 — 2026-11-12
+
+- Uses the Tracker-provided announce interval and resets discovery timing after reconnect.
+- Avoids bursts of delayed announces after a busy or suspended runtime.
+- Preserves CDN playback and transfer statistics while bootstrap recovers.
+
 ## 1.0.10 — 2026-11-07
 
 - Aligns the Apple XCFramework with native SDK 1.0.10.
