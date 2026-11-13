@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 — 2026-11-13
+
+- Updates the Apple XCFramework to native SDK 1.1.1.
+- Publishes iOS device arm64, universal iOS simulator, and universal macOS slices.
+- Keeps iOS 15 and macOS 12 as the minimum deployment targets.
+
+Version and binary verification details: `releases/1.1.1.json`.
+
 ## 1.1.0 — 2026-11-12
 
 - Uses the Tracker-provided announce interval and resets discovery timing after reconnect.

@@ -4,7 +4,7 @@
 
 MeshStreamKit is a P2P video and audio streaming SDK for iOS and macOS apps built with Swift or Objective-C. It provides a local playback URL for AVPlayer or another URL-capable player, adds peer-assisted delivery when available, and falls back to HTTP/CDN delivery.
 
-Current release: `1.1.0`.
+Current release: `1.1.1`.
 
 ## How it works
 
@@ -48,7 +48,7 @@ arm64 slices for macOS.
 ### Swift Package Manager
 
 In Xcode, choose **File → Add Package Dependencies**, enter the package URL,
-select **Exact Version: 1.1.0**, and add the `MeshStreamKit` product to your app target:
+select **Exact Version: 1.1.1**, and add the `MeshStreamKit` product to your app target:
 
 ```text
 https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
@@ -57,18 +57,18 @@ https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk.git
 ### CocoaPods
 
 ```ruby
-pod 'MeshStreamKit', '1.1.0'
+pod 'MeshStreamKit', '1.1.1'
 ```
 
 Run `pod install` after updating your Podfile. You can also pin the versioned podspec:
 
 ```ruby
-pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios-sdk/1.1.0/MeshStreamKit.podspec'
+pod 'MeshStreamKit', :podspec => 'https://raw.githubusercontent.com/Mesh-Stream/meshstream-p2p-ios-sdk/1.1.1/MeshStreamKit.podspec'
 ```
 
 Choose one installation method per app target. SPM requires a toolchain supporting Swift Tools 5.9. After CocoaPods installation, open the generated `.xcworkspace`.
 
-For manual installation, download [MeshStreamKit 1.1.0](https://sdk.meshstream.net/apple/1.1.0/MeshStreamKit.zip), add `MeshStreamKit.xcframework` to the app target and select **Embed & Sign**. The [release record](releases/1.1.0.json) contains its SHA-256.
+For manual installation, download [MeshStreamKit 1.1.1](https://sdk.meshstream.net/apple/1.1.1/MeshStreamKit.zip), add `MeshStreamKit.xcframework` to the app target and select **Embed & Sign**. The [release record](releases/1.1.1.json) contains its SHA-256.
 
 ## Application configuration
 

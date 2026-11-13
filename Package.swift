@@ -8,8 +8,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MeshStreamKit",
-            url: "https://sdk.meshstream.net/apple/1.1.0/MeshStreamKit.zip",
-            checksum: "2d06b0af34e887ff43232144c5cc10858c00d2ca339c5226a195140aa2d0fb46"
+            url: "https://sdk.meshstream.net/apple/1.1.1/MeshStreamKit.zip",
+            checksum: "aff639a81aaecd57ca4713a872331746d703a595e4f2048a91da363d303f076c"
         )
     ]
 )
